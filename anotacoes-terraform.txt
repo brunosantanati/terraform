@@ -9,3 +9,29 @@ INSTALAÇÃO DO TERRAFORM
 INSTALAÇÃO DO AWS-CLI
 Vide:
 https://github.com/brunosantanati/faceanalise/blob/master/aws-cli-anotacoes.txt
+
+OUTROS PASSOS PARA UTILIZAR O TERRAFORM
+1-Instalar o AWS-CLI (vide instruções acima)
+2-No console da AWS ir em IAM e criar um grupo com todas permissões e um usuário que usa esse grupo
+3-Baixar csv com credenciais do novo usuário e dar um cat nele: cat ignore/new_user_credentials.csv
+4-Rodar: aws configure
+  Configurar com Access Key ID, Secret access key, region(pode ser us-east-1) e output format(pode ser json)
+  Pegar Access Key ID e Secret access key do csv
+5-Instalar extension Terraform no VSCode
+6-Gerar uma chave SSH: ssh-keygen -f terraform-aws -t rsa
+  OBS: o parametro do -f, que seria terraform-aws é o nome da chave, ou seja, os arquivos serão gerados com esse nome.
+  Mover as chaves para ~/.ssh
+7-No console da AWS ir em EC2 e clicar em "Key pairs" > Actions > Import key pair. Escolher a chave pública criada no passo anterior.
+  Eu usei uma chave que eu já tinha criado para o GitHub em outro momento (arquivo id_rsa.pub).
+  Como no momento da importação eu dei o nome a ela de terraform-aws, esse é o nome que deve ser usado no arquivo main.tf no campo: key_name = "terraform-aws"
+  
+RODAR O MAIN.TF
+terraform init
+terraform plan
+terraform apply
+  Quando aparecer "Enter a value:" responder yes
+
+PROCURAR POR UM PROVIDER
+https://registry.terraform.io/browse/providers
+AWS PROVIDER
+https://registry.terraform.io/providers/hashicorp/aws/latest
