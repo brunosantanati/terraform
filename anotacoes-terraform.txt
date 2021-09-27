@@ -34,6 +34,9 @@ terraform apply
 OUTROS COMANDOS TERRAFORM  
 terraform show
 
+COMANDOS AWS CLI
+aws ec2 describe-security-groups
+
 PROCURAR POR UM PROVIDER
 https://registry.terraform.io/browse/providers
 AWS PROVIDER
