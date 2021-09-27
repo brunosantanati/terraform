@@ -35,22 +35,6 @@ resource "aws_instance" "dev5" {
   vpc_security_group_ids = ["${aws_security_group.acesso-ssh.id}"]
 }
 
-resource "aws_security_group" "acesso-ssh" {
-  name        = "acesso-ssh"
-  description = "acesso-ssh"
-
-  ingress {
-      from_port        = 22
-      to_port          = 22
-      protocol         = "tcp"
-      cidr_blocks      = ["201.26.192.50/32"]
-  }
-
-  tags = {
-    Name = "ssh"
-  }
-}
-
 resource "aws_s3_bucket" "dev4" {
   bucket = "brunolabs-dev4"
   acl    = "private"
