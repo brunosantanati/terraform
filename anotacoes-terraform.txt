@@ -1,0 +1,11 @@
+DOWNLOAD TERRAFORM
+https://www.terraform.io/downloads.html
+
+INSTALAÇÃO DO TERRAFORM
+1-Baixa o zip do link acima
+2-Descompacta
+3-Coloca a pasta com o terraform.exe no path
+
+INSTALAÇÃO DO AWS-CLI
+Vide:
+https://github.com/brunosantanati/faceanalise/blob/master/aws-cli-anotacoes.txt
