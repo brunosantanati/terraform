@@ -35,3 +35,8 @@ PROCURAR POR UM PROVIDER
 https://registry.terraform.io/browse/providers
 AWS PROVIDER
 https://registry.terraform.io/providers/hashicorp/aws/latest
+AWS PROVIDER DOC
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sqs_queue
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket
