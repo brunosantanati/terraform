@@ -51,3 +51,4 @@ https://registry.terraform.io/providers/hashicorp/aws/latest/docs
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sqs_queue
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/dynamodb_table
