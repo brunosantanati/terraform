@@ -31,6 +31,9 @@ terraform plan
 terraform apply
   Quando aparecer "Enter a value:" responder yes
 
+OUTROS COMANDOS TERRAFORM  
+terraform show
+
 PROCURAR POR UM PROVIDER
 https://registry.terraform.io/browse/providers
 AWS PROVIDER
