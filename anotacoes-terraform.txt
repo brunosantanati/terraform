@@ -41,6 +41,8 @@ ACESSAR EC2 VIA SSH
 Para ver o comando, selecionar a instância EC2 e clicar em Connect > SSH client
 Mudar o caminho e o nome do .pem (chave privada) no comando. No meu caso ficou assim depois de alterar:
 ssh -i "~/.ssh/id_rsa.pem" ubuntu@ec2-3-83-129-212.compute-1.amazonaws.com
+Acessar instância em us-east-2:
+ssh -i "~/.ssh/id_rsa.pem" ec2-user@ec2-3-14-252-200.us-east-2.compute.amazonaws.com
 
 PROCURAR POR UM PROVIDER
 https://registry.terraform.io/browse/providers
