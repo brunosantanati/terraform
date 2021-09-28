@@ -54,3 +54,9 @@ https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/secu
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sqs_queue
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/dynamodb_table
+
+COMMENTS
+https://www.terraform.io/docs/language/syntax/configuration.html
+# begins a single-line comment, ending at the end of the line.
+// also begins a single-line comment, as an alternative to #.
+/* and */ are start and end delimiters for a comment that might span over multiple lines.
