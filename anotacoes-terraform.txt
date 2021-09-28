@@ -33,6 +33,12 @@ terraform apply
 
 OUTROS COMANDOS TERRAFORM  
 terraform show
+terraform destroy
+  Destrói todos recursos
+terraform destroy -target aws_instance.dev4
+  Destrói apenas o recurso aws_instance.dev4
+terraform destroy -target aws_s3_bucket.dev4
+  Destrói o recurso aws_s3_bucket.dev4 e o outro recurso que depende dele que é o aws_instance.dev4
 
 COMANDOS AWS CLI
 aws ec2 describe-security-groups

@@ -20,7 +20,7 @@ resource "aws_instance" "dev" {
   vpc_security_group_ids = ["${aws_security_group.acesso-ssh.id}"]
 }
 
-resource "aws_instance" "dev4" {
+/*resource "aws_instance" "dev4" {
   ami = var.amis["us-east-1"]
   instance_type = "t2.micro"
   key_name = var.key_name
@@ -29,7 +29,7 @@ resource "aws_instance" "dev4" {
   }
   vpc_security_group_ids = ["${aws_security_group.acesso-ssh.id}"]
   depends_on = [aws_s3_bucket.dev4]
-}
+}*/
 
 resource "aws_instance" "dev5" {
   ami = var.amis["us-east-1"]
@@ -66,14 +66,14 @@ resource "aws_instance" "dev7" {
   vpc_security_group_ids = ["${aws_security_group.acesso-ssh-us-east-2.id}"]
 }
 
-resource "aws_s3_bucket" "dev4" {
+/*resource "aws_s3_bucket" "dev4" {
   bucket = "brunolabs-dev4"
   acl    = "private"
 
   tags = {
     Name        = "brunolabs-dev4"
   }
-}
+}*/
 
 resource "aws_dynamodb_table" "dynamodb-homologacao-table" {
   provider = aws.us-east-2
