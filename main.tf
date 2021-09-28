@@ -42,7 +42,7 @@ resource "aws_instance" "dev5" {
 }
 
 resource "aws_instance" "dev6" {
-  provider = "aws.us-east-2"
+  provider = aws.us-east-2
   ami = var.amis["us-east-2"]
   instance_type = "t2.micro"
   key_name = "terraform-aws"
@@ -51,7 +51,7 @@ resource "aws_instance" "dev6" {
   }
   vpc_security_group_ids = ["${aws_security_group.acesso-ssh-us-east-2.id}"]
   depends_on = [
-    "aws_dynamodb_table.dynamodb-homologacao-table"
+    aws_dynamodb_table.dynamodb-homologacao-table
   ]
 }
 
@@ -65,7 +65,7 @@ resource "aws_s3_bucket" "dev4" {
 }
 
 resource "aws_dynamodb_table" "dynamodb-homologacao-table" {
-  provider = "aws.us-east-2"
+  provider = aws.us-east-2
   name           = "GameScores"
   billing_mode   = "PAY_PER_REQUEST"
   hash_key       = "UserId"
