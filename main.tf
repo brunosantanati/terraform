@@ -1,12 +1,16 @@
 provider "aws" {
   version = "~> 2.0"
   region  = "us-east-1"
+  access_key = "my-access-key" # Trocar pelo aws_access_key_id
+  secret_key = "my-secret-key" # Trocar pelo aws_secret_access_key
 }
 
 provider "aws" {
   alias = "us-east-2"
   version = "~> 2.0"
   region  = "us-east-2"
+  access_key = "my-access-key" # Trocar pelo aws_access_key_id
+  secret_key = "my-secret-key" # Trocar pelo aws_secret_access_key
 }
 
 resource "aws_instance" "dev" {

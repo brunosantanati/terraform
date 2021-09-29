@@ -65,6 +65,7 @@ https://registry.terraform.io/browse/providers
 AWS PROVIDER
 https://registry.terraform.io/providers/hashicorp/aws/latest
 AWS PROVIDER DOC
+https://terraform.io/docs/providers/aws/index.html
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sqs_queue
