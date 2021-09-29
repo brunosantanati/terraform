@@ -40,6 +40,7 @@ terraform destroy -target aws_instance.dev4
 terraform destroy -target aws_s3_bucket.dev4
   Destrói o recurso aws_s3_bucket.dev4 e o outro recurso que depende dele que é o aws_instance.dev4
 terraform refresh
+terraform login
 
 COMANDOS AWS CLI
 aws ec2 describe-security-groups
@@ -51,6 +52,14 @@ ssh -i "~/.ssh/id_rsa.pem" ubuntu@ec2-3-83-129-212.compute-1.amazonaws.com
 Acessar instância em us-east-2:
 ssh -i "~/.ssh/id_rsa.pem" ec2-user@ec2-3-14-252-200.us-east-2.compute.amazonaws.com
 
+ARQUIVO DE CONFIGURAÇÃO (TERRAFORM CLI)
+Nome do arquivo: .terraformrc
+Local: Pasta do usuário, ex C:\Users\myuser. No meu caso só funcionou salvando o arquivo como C:\Users\myuser\AppData\Roaming\terraform.d\credentials.tfrc.json
+Conteúdo:
+credentials "app.terraform.io" {
+  token = "token-gerado-no-site-do-terraform-cloud"
+}
+
 PROCURAR POR UM PROVIDER
 https://registry.terraform.io/browse/providers
 AWS PROVIDER
@@ -61,6 +70,13 @@ https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/secu
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sqs_queue
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/dynamodb_table
+OUTROS LINKS DOC
+https://www.terraform.io/docs/cli/config/config-file.html
+https://www.terraform.io/docs/language/settings/backends/remote.html
+
+TERRAFORM CLOUD
+https://www.terraform.io/cloud
+user: bruno-santana-ti
 
 COMMENTS
 https://www.terraform.io/docs/language/syntax/configuration.html
