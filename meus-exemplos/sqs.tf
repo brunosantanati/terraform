@@ -27,4 +27,49 @@ resource "aws_sqs_queue" "openbanking-queue" {
   tags = {
     Environment = "production"
   }
+
+  policy = <<POLICY
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "sqs:SendMessage",
+      "Resource": "arn:aws:sqs:*:*:openbanking-queue",
+      "Condition": {
+        "ArnEquals": { "aws:SourceArn": "${aws_s3_bucket.openbanking-bucket.arn}" }
+      }
+    }
+  ]
 }
+POLICY
+}
+
+/*
+EXEMPLO DE POLITICA DE ACESSO QUE USEI EM UM PROJETO
+
+{
+  "Version": "2012-10-17",
+  "Id": "example-ID",
+  "Statement": [
+    {
+      "Sid": "example-statement-ID",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "s3.amazonaws.com"
+      },
+      "Action": "SQS:*",
+      "Resource": "arn:aws:sqs:sa-east-1:348197166762:nome-fila-aqui",
+      "Condition": {
+        "StringEquals": {
+          "aws:SourceAccount": "account-aqui"
+        },
+        "ArnLike": {
+          "aws:SourceArn": "arn:aws:s3:*:*:nome-bucket-aqui"
+        }
+      }
+    }
+  ]
+}
+*/

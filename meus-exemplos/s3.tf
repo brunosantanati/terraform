@@ -22,3 +22,13 @@ resource "aws_s3_bucket_object" "openbanking-folders" {
     Name = "openbanking-folders"
   }
 }
+
+resource "aws_s3_bucket_notification" "openbanking-bucket-notification" {
+  bucket = aws_s3_bucket.openbanking-bucket.id
+
+  queue {
+    queue_arn     = aws_sqs_queue.openbanking-queue.arn
+    events        = ["s3:ObjectCreated:*"]
+    filter_prefix = "folder1/"
+  }
+}
