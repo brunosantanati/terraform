@@ -71,10 +71,24 @@ https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/secu
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sqs_queue
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_notification
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/kms_alias
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/dynamodb_table
 OUTROS LINKS DOC
 https://www.terraform.io/docs/cli/config/config-file.html
 https://www.terraform.io/docs/language/settings/backends/remote.html
+
+Why aren’t Amazon S3 event notifications delivered to an Amazon SQS queue that uses server-side encryption?
+https://aws.amazon.com/pt/premiumsupport/knowledge-center/sqs-s3-event-notification-sse/
+
+Provision a KMS customer-managed key (CMK)
+https://registry.terraform.io/modules/figurate/kms-key/aws/latest
+
+Terraform module for creating KMS Customer Managed Keys(CMK) on AWS
+https://github.com/oguya/terraform-aws-kms-module
+
+Introduction to Terraform Modules
+https://www.youtube.com/watch?v=zPgsYZuK1Fg
 
 TERRAFORM CLOUD
 https://www.terraform.io/cloud

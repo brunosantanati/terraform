@@ -4,7 +4,7 @@ resource "aws_sqs_queue" "openbanking-queue-dlq" {
   max_message_size          = 2048
   message_retention_seconds = 86400
   receive_wait_time_seconds = 10
-  kms_master_key_id                 = "alias/aws/sqs"
+  kms_master_key_id                 = "alias/${var.kms_alias}"
   kms_data_key_reuse_period_seconds = 300
 
   tags = {
@@ -23,9 +23,10 @@ resource "aws_sqs_queue" "openbanking-queue" {
     maxReceiveCount     = 4
   })
   depends_on = [
-    aws_sqs_queue.openbanking-queue-dlq
+    aws_sqs_queue.openbanking-queue-dlq,
+    aws_kms_key.openbanking-key-2
   ]
-  kms_master_key_id                 = "alias/aws/sqs"
+  kms_master_key_id                 = "alias/${var.kms_alias}"
   kms_data_key_reuse_period_seconds = 300
 
   tags = {
