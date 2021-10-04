@@ -82,6 +82,7 @@ Why aren’t Amazon S3 event notifications delivered to an Amazon SQS queue that
 https://aws.amazon.com/pt/premiumsupport/knowledge-center/sqs-s3-event-notification-sse/
 
 Provision a KMS customer-managed key (CMK)
+https://github.com/figurate/terraform-aws-kms-key
 https://registry.terraform.io/modules/figurate/kms-key/aws/latest
 
 Terraform module for creating KMS Customer Managed Keys(CMK) on AWS
